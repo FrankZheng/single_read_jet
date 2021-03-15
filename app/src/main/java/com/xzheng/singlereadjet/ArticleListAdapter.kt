@@ -2,6 +2,7 @@ package com.xzheng.singlereadjet
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.DiffUtil
@@ -36,5 +37,8 @@ class ArticleListAdapter : ListAdapter<Article, ArticleListAdapter.ArticleItemVi
     override fun onBindViewHolder(holder: ArticleItemViewHolder, position: Int) {
         val article = getItem(position)
         holder.bind(article)
+        holder.itemView.setOnClickListener {
+            it.findNavController().navigate(R.id.action_articleListFragment_to_articleDetailFragment)
+        }
     }
 }
