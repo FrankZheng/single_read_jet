@@ -8,7 +8,8 @@ import com.xzheng.singlereadjet.network.Article
 import com.xzheng.singlereadjet.network.SingleReadApi
 import kotlinx.coroutines.launch
 
-class ArticlesViewModel : ViewModel() {
+class ArticleListViewModel : ViewModel() {
+
     private val _status = MutableLiveData<String>()
     val status: LiveData<String>
         get() = _status
