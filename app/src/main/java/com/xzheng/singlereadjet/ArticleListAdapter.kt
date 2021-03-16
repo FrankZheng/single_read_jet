@@ -38,7 +38,7 @@ class ArticleListAdapter : ListAdapter<Article, ArticleListAdapter.ArticleItemVi
         val article = getItem(position)
         holder.bind(article)
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.action_articleListFragment_to_articleDetailFragment)
+            it.findNavController().navigate(ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment())
         }
     }
 }
